@@ -29,3 +29,11 @@
 </ol>
 
 <h1> Small Project </h1>
+<p>Given the following HTML in: <i><strong>nav-bar.html</strong></i></p>
+
+<ol>
+    <li>Create a responsive navbar that displays the full navigation menu on big screen</li>
+    <li>On small screen hides the navigation menu and displays a menu icon instead. </li>
+    <li> Add an event listener to this menu icon that will show and hide the menu when clicked.</li>
+    <li> Be creative and feel free to choose your own design. </li>
+</ol>
