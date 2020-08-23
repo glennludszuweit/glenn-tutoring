@@ -8,17 +8,29 @@
   <body>
     <h1>Spit it out!</h1>
 
-    <ul>
-      <li>Noun: <input type="text" id="noun" /></li>
-      <li>Adjective: <input type="text" id="adjective" /></li>
-      <li>Someone's Name: <input type="text" id="person" /></li>
-    </ul>
+    <p>Noun: <input type="text" id="noun" /></p>
+    <p>Adjective: <input type="text" id="adjective" /></p>
+    <p>Someone's Name: <input type="text" id="person" /></p>
 
-    <button id="spti-button">Spit!</button>
+    <button id="spit-button">Spit!</button>
 
     <div id="sentence"></div>
   </body>
   <script>
-    //CODE GOES HERE
+    //2. Write a function spitItOut().
+    let spitItOut = () => {
+      //3. The spitItOut() function should retrieve/get the values entered in the input fields and concatenate the values to form a sentence out of it. (e.g. Tony married a beautiful cat ... so wierd!)
+      let noun = document.getElementById('noun').value;
+      let adjective = document.getElementById('adjective').value;
+      let person = document.getElementById('person').value;
+
+      let sentence = document.getElementById('sentence');
+      sentence.textContent = noun + ' ' + adjective + ' ' + person;
+    };
+
+    let spitBtn = document.getElementById('spit-button');
+
+    //4. Add an eventListener to the button To call the spitItOut() when CLICKED
+    spitBtn.addEventListener('click', spitItOut);
   </script>
 </html>
