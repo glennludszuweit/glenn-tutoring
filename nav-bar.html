@@ -7,11 +7,94 @@
   </head>
   <body>
     <!-- HTML GOES HERE -->
+    <nav>
+      <div class="website-name">Toggle Nav</div>
+      <div class="menu">
+        <div class="nav-links">
+          <div class="link">Home</div>
+          <div class="link">About</div>
+          <div class="link">Services</div>
+          <div class="link">Contact</div>
+        </div>
+        <a class="menu-btn" href="">MENU</a>
+      </div>
+    </nav>
   </body>
   <style>
     /* CSS GOES HERE */
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      background: green;
+      color: white;
+      width: 100%;
+    }
+
+    .menu {
+      display: flex;
+    }
+
+    .nav-links {
+      display: flex;
+    }
+
+    .link {
+      padding: 0 10px;
+    }
+
+    .menu-btn {
+      display: none;
+      color: white;
+    }
+
+    @media screen and (max-width: 600px) {
+      .nav-links {
+        display: none;
+      }
+
+      .menu-btn {
+        display: flex;
+      }
+
+      .show-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+        height: 100%;
+        width: 250px;
+      }
+
+      .link-padding {
+        padding: 10px 0;
+      }
+    }
   </style>
   <script>
     //   JAVASCRIPT GOES HERE'
+    const menuBtn = document.querySelector('.menu-btn');
+    const showMenuItems = document.querySelector('.nav-links');
+    const link = document.querySelectorAll('.link');
+
+    menuBtn.addEventListener('click', (event) => {
+      event.preventDefault();
+      // if (showMenuItems.classList.contains('show-menu')) {
+      //   showMenuItems.classList.remove('show-menu');
+      // } else {
+      //   showMenuItems.classList.add('show-menu');
+      // }
+      showMenuItems.classList.toggle('show-menu');
+
+      link.forEach((i) => {
+        i.classList.add('link-padding');
+      });
+    });
   </script>
 </html>
